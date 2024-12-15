@@ -185,7 +185,7 @@ export function App() {
           {email && <EmailCopy text={email} />}
         </div>
       </div>
-      <footer>&copy; João Leandro</footer>
+      <footer>&copy; <a href="https://github.com/Humildeficador">João Leandro</a>, UPA Silvina/Ferrazopolis</footer>
     </>
   )
 }

@@ -56,6 +56,21 @@ header {
       display: flex;
       justify-content: space-between;
       width: 100%;
+
+      span {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+
+        input {
+          cursor: pointer;
+        }
+
+        label {
+          cursor: pointer;
+          user-select: none;
+        }
+      }
     }
   }
 }
@@ -65,6 +80,13 @@ footer {
   bottom: .5rem;
   left: 50%;
   transform: translate(-50%);
+
+  a {
+    text-decoration: none;
+    color: var(--emerald-500);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
 }
 
 .destinatario {
