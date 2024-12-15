@@ -1,0 +1,17 @@
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &+& {
+    margin-top: .5rem;
+  }
+
+  input {
+    outline: none;
+    padding: 0.2rem 0.5rem 0.2rem .8rem;
+    width: 300px;
+    border-radius: 8px;
+    border: 0;
+  }
+}

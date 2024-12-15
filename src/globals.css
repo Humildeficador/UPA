@@ -1,0 +1,40 @@
+:root {
+  --slate-100: #f1f5f9;
+  --slate-900: #0f172a;
+  --emerald-500: #10b981;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--slate-900);
+  color: var(--slate-100);
+}
+
+body, input, textarea, button {
+  font: 400 1rem 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
