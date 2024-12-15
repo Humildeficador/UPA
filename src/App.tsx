@@ -1,10 +1,11 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, MouseEvent, useState } from 'react'
 import styles from './App.module.css'
 import { InputBox } from './components/InputBox/InputBox'
 import { InputBoxEndereco } from './components/InputBoxEndereco/InputBoxEndereco'
 import { FormValues } from './types/FormData'
 import { formatedEmail } from './utils/email'
 import { EmailCopy } from './components/EmailCopy/EmailCopy'
+import { toast } from 'react-toastify'
 
 export function App() {
   const [email, setEmail] = useState('')
@@ -185,7 +186,7 @@ export function App() {
           {email && <EmailCopy text={email} />}
         </div>
       </div>
-      <footer>&copy; <a href="https://github.com/Humildeficador">João Leandro</a>, UPA Silvina/Ferrazopolis</footer>
+      <footer>&copy; <a href="https://github.com/Humildeficador" target='_blank'>João Leandro</a>, UPA Silvina/Ferrazopolis</footer>
     </>
   )
 }
@@ -195,6 +196,11 @@ interface DestinatarioProps {
 }
 
 function Destinatario({ destinatario }: DestinatarioProps) {
+  function handleCopy(e: MouseEvent<HTMLTextAreaElement>) {
+    const preClipboard = e.currentTarget.innerText
+    navigator.clipboard.writeText(preClipboard)
+    toast.success('Destinatario copiado com sucesso.')
+  }
 
   if (destinatario === '') {
     return (
@@ -203,7 +209,7 @@ function Destinatario({ destinatario }: DestinatarioProps) {
   } else if (destinatario === 'ao Hygia') {
     return (
       <div className={styles.destinatario}>
-        <span>suporte.ti@cssbc.org.br</span>
+        <span onClick={handleCopy}>suporte.ti@cssbc.org.br</span>
         <ul>
           <li>
             Criação e redefinição de senha <strong>Hygia</strong>
@@ -215,7 +221,7 @@ function Destinatario({ destinatario }: DestinatarioProps) {
     return (
       <div className={styles.destinatario}>
         <div>
-          <span>tic.saude@saobernardo.sp.gov.br</span>
+          <span onClick={handleCopy}>tic.saude@saobernardo.sp.gov.br</span>
           <h3>Demais Solicitações</h3>
         </div>
         <ul>

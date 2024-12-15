@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from 'react'
+import { MouseEvent } from 'react'
 import style from './EmailCopy.module.css'
 import { toast } from 'react-toastify'
 
@@ -6,13 +6,9 @@ interface TextCopyProps {
   text: string
 }
 
-export function EmailCopy({ text }: TextCopyProps) {
-  const [clipboard, setClipboard] = useState('')
-
-  navigator.clipboard.writeText(clipboard)
-
+export function EmailCopy({ text }: TextCopyProps) {  
   function handleCopy(e: MouseEvent<HTMLTextAreaElement>) {
-    setClipboard(e.currentTarget.value)
+    navigator.clipboard.writeText(e.currentTarget.value)
     toast.success('Email copiado com sucesso.')
   }
 
