@@ -1,11 +1,11 @@
-import { ChangeEvent, MouseEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import styles from './App.module.css'
 import { InputBox } from './components/InputBox/InputBox'
 import { InputBoxEndereco } from './components/InputBoxEndereco/InputBoxEndereco'
 import { FormValues } from './types/FormData'
 import { formatedEmail } from './utils/email'
 import { EmailCopy } from './components/EmailCopy/EmailCopy'
-import { toast } from 'react-toastify'
+
 import { Destinatario } from './components/Destinatario/Destinatario'
 
 export function App() {
