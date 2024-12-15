@@ -24,6 +24,25 @@ header {
         text-align: center;
       }
     }
+
+    button {
+      margin-top: .5rem;
+      width: 100%;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      padding: .3rem;
+      outline: none;
+      background-color: transparent;
+
+      border: 1px solid var(--emerald-500);
+      color: var(--emerald-500);
+      transition: border .2s, color .2s;
+      
+      &:hover {
+        border: 1px solid var(--emerald-400);
+        color: var(--emerald-400);
+      }
+    }
   }
 }
 
@@ -52,7 +71,7 @@ header {
   padding: 3rem 0;
 
   nav {
-    div {
+    >div {
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -86,28 +105,10 @@ footer {
     color: var(--emerald-500);
     font-size: 1.1rem;
     font-weight: 500;
-  }
-}
+    transition: color .2s;
 
-.destinatario {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  span {
-    font-size: 1.2rem;
-    line-height: 1.2;
-    color: var(--emerald-500);
-  }
-
-  ul {
-    margin-top: 1rem;
-    margin-left: 1.2rem;
+    &:hover {
+      color: var(--emerald-400);
+    }
   }
 }

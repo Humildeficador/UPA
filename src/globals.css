@@ -1,6 +1,10 @@
 :root {
   --slate-100: #f1f5f9;
   --slate-900: #0f172a;
+  --emerald-50: #ecfdf7;
+  --emerald-100: #d1faec;
+  --emerald-200: #a7f3da;
+  --emerald-400: #34d39e;
   --emerald-500: #10b981;
 }
 
@@ -15,11 +19,20 @@ body {
   color: var(--slate-100);
 }
 
-body, input, textarea, button {
+body,
+input,
+textarea,
+button {
   font: 400 1rem 'Poppins', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-weight: 600;
 }
 

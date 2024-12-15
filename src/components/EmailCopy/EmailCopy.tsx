@@ -1,5 +1,5 @@
 import { MouseEvent } from 'react'
-import style from './EmailCopy.module.css'
+import styles from './EmailCopy.module.css'
 import { toast } from 'react-toastify'
 
 interface TextCopyProps {
@@ -13,9 +13,9 @@ export function EmailCopy({ text }: TextCopyProps) {
   }
 
   return (
-    <div className={style.container}>
+    <div className={styles.container}>
       <textarea
-        className={style.textarea}
+        className={styles.textarea}
         readOnly
         value={text}
         onClick={handleCopy}

@@ -1,0 +1,49 @@
+.destinatario {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  .assunto {
+    display: flex;
+    gap: .5rem;
+
+    span {
+      color: var(--emerald-200);
+      transition: color .2s;
+
+      &:hover {
+        color: var(--emerald-100);
+      }
+    }
+  }
+
+  .title {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      color: var(--emerald-500);
+      transition: color .2s;
+
+      &:hover {
+        color: var(--emerald-400);
+      }
+    }
+  }
+
+  h3 {
+    margin-top: .5rem;
+  }
+
+  ul {
+    margin-top: 1rem;
+    margin-left: 1.2rem;
+  }
+}
+
+.title {
+  display: flex;
+}
